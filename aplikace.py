@@ -39,8 +39,8 @@ class Aplikace:
             pojisteny = Pojisteny(jmeno, prijmeni, vek, telefon)
             self.evidence.pridat_pojisteneho(pojisteny)
             print("Data byla uložena.")
-        except ValueError as e:
-            print(f"Chyba: {e}")
+        except ValueError as chyba:
+            print(f"Chyba: {chyba}")
 
     def zadej_a_vyhledat(self):
         jmeno, prijmeni = self.zadej_jmeno_prijmeni()
