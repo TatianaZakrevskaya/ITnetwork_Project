@@ -5,7 +5,7 @@ class Aplikace:
     def __init__(self):
         self.evidence = Evidence()
 
-    def spustit(self):
+    def spust(self):
         while True:
             self.vypis_menu()
             volba = input("Vyberte si akci: ")
@@ -14,7 +14,7 @@ class Aplikace:
             elif volba == "2":
                 self.evidence.vypis_vsechny()
             elif volba == "3":
-                self.zadej_a_vyhledat()
+                self.zadej_a_vyhledej()
             elif volba == "4":
                 print("Ukončuji aplikaci...")
                 break
@@ -37,14 +37,14 @@ class Aplikace:
         vek = input("Zadejte věk: ")
         try:
             pojisteny = Pojisteny(jmeno, prijmeni, vek, telefon)
-            self.evidence.pridat_pojisteneho(pojisteny)
+            self.evidence.pridej_pojisteneho(pojisteny)
             print("Data byla uložena.")
         except ValueError as chyba:
             print(f"Chyba: {chyba}")
 
-    def zadej_a_vyhledat(self):
+    def zadej_a_vyhledej(self):
         jmeno, prijmeni = self.zadej_jmeno_prijmeni()
-        self.evidence.vyhledat_pojisteneho(jmeno, prijmeni)
+        self.evidence.vyhledej_pojisteneho(jmeno, prijmeni)
 
     def zadej_jmeno_prijmeni(self):
         jmeno = input("Zadejte jméno pojištěného: ")

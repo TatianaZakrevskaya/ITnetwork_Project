@@ -15,7 +15,7 @@ class Evidence:
     def vyhledej_pojisteneho(self, jmeno, prijmeni):
         nalezeni = []
         for pojistenec in self.pojisteni:
-            if pojistenec.jmeno.lower().strip() == jmeno.lower().strip() and p.prijmeni.lower().strip() == prijmeni.lower().strip():
+            if pojistenec.jmeno.lower().strip() == jmeno.lower().strip() and pojistenec.prijmeni.lower().strip() == prijmeni.lower().strip():
                 nalezeni.append(pojistenec)
         if nalezeni:
             for pojistenec in nalezeni:

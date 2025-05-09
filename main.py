@@ -2,5 +2,5 @@ from aplikace import Aplikace
 from evidence import Evidence
 from pojisteny import Pojisteny
 
-app = Aplikace()
-app.spustit()
+pusteni_aplikace = Aplikace()
+pusteni_aplikace.spust()
